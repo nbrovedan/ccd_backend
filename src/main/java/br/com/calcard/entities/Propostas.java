@@ -39,7 +39,7 @@ public class Propostas implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer codigo;
 	@JsonIgnore
-	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@ManyToOne(fetch=FetchType.EAGER)
 	@OnDelete(action=OnDeleteAction.CASCADE)
 	@JoinColumn(nullable=false)
 	private Clientes cliente;
